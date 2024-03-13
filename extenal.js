@@ -34,21 +34,28 @@ const quotes = [{
 }, {
     quote: `'If you’re offered a seat on a rocket ship, don’t ask what seat. Just get on'`,
     writer: ` — Sheryl Sandberg`
-
-}
-
-]
-
-let btn = document.querySelector('#Qbtn')
-let quote = document.querySelector('.quote')
-let writer = document.querySelector(".writer")
+}];
 
 
-btn.addEventListener("click", function () {
-    let random = Math.floor(Math.random() * quotes.length)
-    quote.innerHTML = quotes[random].quote
-    writer.innerHTML = quotes[random].writer
-})
+
+document.addEventListener("DOMContentLoaded", function () {
+    let btn = document.querySelector('#Qbtn');
+    let quoteDisplay = document.querySelector('.quote');
+    let writerDisplay = document.querySelector(".writer");
+    let whatsappLink = document.getElementById("whatsappLink");
+    let instagramLink = document.getElementById('instagramLink')
+    btn.addEventListener("click", function () {
+        let random = Math.floor(Math.random() * quotes.length);
+        let randomQuote = quotes[random];
+        quoteDisplay.innerText = randomQuote.quote;
+        writerDisplay.innerText = randomQuote.writer;
+
+        let message = encodeURIComponent(randomQuote.quote + " - " + randomQuote.writer);
+        whatsappLink.href = "https://wa.me/?text=" + message;
+        instagramLink.href = 'https://www.instagram.com/' + message;
+    });
+});
+
 
 
 

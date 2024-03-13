@@ -86,7 +86,7 @@ button {
     padding: 0.6em 2em;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
+    color: rgb(99, 7, 7);
     background: #111;
     cursor: pointer;
     position: relative;
@@ -100,13 +100,9 @@ button {
       45deg,
       #ff0000,
       #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
+    
+    
+     
     );
     position: absolute;
     top: -2px;
@@ -167,6 +163,8 @@ button {
   
   .writer { font-size: 18px; } }
 
+#whatsappLink{
 
+}
 
   
